@@ -1,5 +1,6 @@
 const mysql = require("mysql");
 const inquirer = require("inquirer");
+const {printTable} = require('console-table-printer');
 
 const connection = mysql.createConnection({
     host:"localhost",
@@ -9,5 +10,13 @@ const connection = mysql.createConnection({
     database: "bamazon"
 })
 connection.connect(function(err){
-    console.log("Connected as id: " +connection.threadId);
+    if (err) throw err;
+    displayTable();
 })
+
+function displayTable(){
+    connection.query("SELECT * FROM bamazon.products", function (err, res){
+    printTable(res);    
+    })
+    
+}
