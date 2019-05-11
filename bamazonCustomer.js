@@ -22,7 +22,7 @@ function displayTable() {
     })
 
 }
-
+// ask clients for purchase id and quantity
 function selectId() {
     inquirer.prompt([
         {
@@ -36,9 +36,14 @@ function selectId() {
             message: "How many would you like to purchase?"
         }
     ])
+        // grab the answers(value)
         .then(answers => {
-            var Quantity = answers.quantity;
-            var ID = answers.id;
-
+            quantityValue = answers.quantity;
+            idValue = answers.id;
+            console.log(idValue);
+            console.log(quantityValue);
         });
-}
+    }
+    // 
+    var quantityValue;
+    var idValue;
