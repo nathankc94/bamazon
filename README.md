@@ -3,6 +3,6 @@ Amazon-like storefront with the MySQL skills. The app will take in orders from c
 
 # Demo
 If the item is in stock, then it will let users purchase and update the stock quatity. 
-![Demo screenshot](Sc1.png)
+![Demo screenshot1](/Sc1.png)
 If the item is out of stock it will show Insufficient quantity! message. 
-![Demo screenshot](Sc2.png)
+![Demo screenshot2](/Sc2.png)
