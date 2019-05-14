@@ -58,7 +58,7 @@ function purchaseOrder(ID, QUANTITY){
             console.log("Your total cost for " + QUANTITY + " " +res[0].product_name + " is $" + totalCost + " Thank you!");
 			connection.query("UPDATE products SET stock_quantity = stock_quantity -  "+ QUANTITY +" WHERE item_id =" + ID + ";");
 		} else{
-			console.log("Insufficient quantity");
+			console.log("Insufficient quantity!");
 		};
 		displayTable();
 	});
